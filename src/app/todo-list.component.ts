@@ -39,12 +39,8 @@ import { selectTodos } from './state/todo.selectors';
       </div>
 
     </ul>
-
-    <!-- <form (ngSubmit)="addTodoItem()"> -->
   <input type="text" [(ngModel)]="newTodoText" placeholder="Enter a new To Do item">
   <button (click)="addTodoItem()" type="submit">Add</button>
-<!-- </form>  -->
-
   `,
 })
 export class ToDoListComponent implements OnInit {
