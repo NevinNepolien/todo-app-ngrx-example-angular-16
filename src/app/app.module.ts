@@ -9,6 +9,7 @@ import { todoReducer } from './state/todo.reducer';
 import { ToDoEffects } from './state/todo.effects';
 import { ToDoListComponent } from './todo-list.component';
 import { FormsModule } from '@angular/forms';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     EffectsModule.forRoot([]),
     StoreModule.forRoot({ todo: todoReducer }),
     EffectsModule.forRoot([ToDoEffects]),
-    
+    StoreDevtoolsModule.instrument()
   ],
   providers: [],
   bootstrap: [AppComponent]
